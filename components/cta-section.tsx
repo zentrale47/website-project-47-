@@ -31,15 +31,14 @@ export function CTASection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-br from-green-600 to-green-700">
+    <section ref={sectionRef} className="py-20 px-4 bg-primary">
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-6 text-balance">
             Bereit für professionelle Reinigung?
           </h2>
-          <p className="text-xl text-green-100 max-w-2xl mx-auto leading-relaxed">
-            Kontaktieren Sie uns für ein unverbindliches Angebot. 
-            Wir melden uns innerhalb von 24 Stunden.
+          <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed text-pretty">
+            Kontaktieren Sie uns für ein unverbindliches Angebot. Wir melden uns innerhalb von 24 Stunden.
           </p>
         </div>
 
@@ -47,43 +46,43 @@ export function CTASection() {
         <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           {/* Phone */}
           <a 
-            href="tel:+4917631285390" 
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+            href="tel:+491726316205" 
+            className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300 group"
           >
-            <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Phone className="w-7 h-7 text-white" />
+            <div className="w-14 h-14 bg-primary-foreground/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <Phone className="w-7 h-7 text-primary-foreground" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Anrufen</h3>
-            <p className="text-green-100 mb-4">Direkt mit uns sprechen</p>
-            <span className="text-white font-medium">+49 176 31285390</span>
+            <h3 className="text-xl font-bold text-primary-foreground mb-2">Anrufen</h3>
+            <p className="text-primary-foreground/80 mb-4">Direkt mit uns sprechen</p>
+            <span className="text-primary-foreground font-medium">0172 6316205</span>
           </a>
 
           {/* WhatsApp */}
           <a 
-            href="https://wa.me/4917631285390" 
+            href="https://wa.me/491726316205" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+            className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300 group"
           >
-            <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <MessageCircle className="w-7 h-7 text-white" />
+            <div className="w-14 h-14 bg-primary-foreground/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <MessageCircle className="w-7 h-7 text-primary-foreground" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">WhatsApp</h3>
-            <p className="text-green-100 mb-4">Schnell und unkompliziert</p>
-            <span className="text-white font-medium">Jetzt schreiben</span>
+            <h3 className="text-xl font-bold text-primary-foreground mb-2">WhatsApp</h3>
+            <p className="text-primary-foreground/80 mb-4">Schnell und unkompliziert</p>
+            <span className="text-primary-foreground font-medium">Jetzt schreiben</span>
           </a>
 
           {/* Email */}
           <Link 
             href="/angebot"
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+            className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300 group"
           >
-            <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Mail className="w-7 h-7 text-white" />
+            <div className="w-14 h-14 bg-primary-foreground/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <Mail className="w-7 h-7 text-primary-foreground" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Online Anfrage</h3>
-            <p className="text-green-100 mb-4">Formular in 60 Sekunden</p>
-            <span className="text-white font-medium">Angebot anfragen</span>
+            <h3 className="text-xl font-bold text-primary-foreground mb-2">Online Anfrage</h3>
+            <p className="text-primary-foreground/80 mb-4">Formular in 60 Sekunden</p>
+            <span className="text-primary-foreground font-medium">Angebot anfragen</span>
           </Link>
         </div>
 
@@ -92,7 +91,7 @@ export function CTASection() {
           <Link href="/angebot">
             <Button 
               size="lg" 
-              className="bg-white text-green-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold shadow-xl"
+              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 rounded-full px-8 py-6 text-lg font-semibold shadow-xl"
             >
               Kostenloses Angebot anfragen
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -102,7 +101,7 @@ export function CTASection() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-2 border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg font-semibold bg-transparent"
+              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8 py-6 text-lg font-semibold bg-transparent"
             >
               Kontakt aufnehmen
             </Button>
@@ -110,7 +109,7 @@ export function CTASection() {
         </div>
 
         {/* Info Row */}
-        <div className={`flex flex-wrap items-center justify-center gap-8 mt-12 text-green-100 transition-all duration-1000 delay-600 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div className={`flex flex-wrap items-center justify-center gap-8 mt-12 text-primary-foreground/80 transition-all duration-1000 delay-600 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="flex items-center gap-2">
             <MapPin className="w-5 h-5" />
             <span>München & Umgebung</span>

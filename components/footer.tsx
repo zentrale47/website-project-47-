@@ -46,12 +46,19 @@ const footerLinks: FooterSection[] = [
       { title: "Angebot anfragen", href: "/angebot" },
     ],
   },
+  {
+    label: "Rechtliches",
+    links: [
+      { title: "Impressum", href: "/impressum" },
+      { title: "Datenschutz", href: "/datenschutz" },
+    ],
+  },
 ]
 
 export function Footer() {
   return (
-    <footer className="md:rounded-t-6xl relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center rounded-t-4xl border-t border-gray-200 bg-white px-6 py-12 lg:py-16">
-      <div className="bg-gray-200 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur" />
+    <footer className="md:rounded-t-6xl relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center rounded-t-4xl border-t border-border bg-card px-6 py-12 lg:py-16">
+      <div className="bg-border absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur" />
 
       <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
@@ -64,8 +71,12 @@ export function Footer() {
               className="h-32 w-auto cursor-pointer hover:opacity-80 transition-opacity"
             />
           </Link>
-          <div className="text-gray-600 mt-8 text-sm md:mt-0 md:block hidden">
-            <p>© {new Date().getFullYear()} CleanVis. Alle Rechte vorbehalten.</p>
+          <div className="text-muted-foreground mt-8 text-sm md:mt-0 md:block hidden space-y-1">
+            <p className="font-medium text-foreground">CleanVis · Devis Lucaci</p>
+            <p>Sarasatestraße 26, 81247 München</p>
+            <p>Tel: 0172 6316205</p>
+            <p>E-Mail: info@cleanvis.de</p>
+            <p className="pt-2">© {new Date().getFullYear()} CleanVis. Alle Rechte vorbehalten.</p>
           </div>
         </AnimatedContainer>
 
@@ -73,13 +84,13 @@ export function Footer() {
           {footerLinks.map((section, index) => (
             <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
               <div className="mb-10 md:mb-0">
-                <h3 className="text-xs text-gray-900 font-semibold">{section.label}</h3>
-                <ul className="text-gray-600 mt-4 space-y-2 text-sm">
+                <h3 className="text-xs text-foreground font-semibold">{section.label}</h3>
+                <ul className="text-muted-foreground mt-4 space-y-2 text-sm">
                   {section.links.map((link) => (
                     <li key={link.title}>
                       <Link
                         href={link.href}
-                        className="hover:text-green-600 inline-flex items-center transition-all duration-300"
+                        className="hover:text-primary inline-flex items-center transition-all duration-300"
                         onClick={(e) => {
                           if (!link.href.includes("#") || link.href === "#") return
                           e.preventDefault()
@@ -109,8 +120,11 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="md:hidden mt-8 text-center space-y-2">
-        <p className="text-gray-600 text-sm">© {new Date().getFullYear()} CleanVis. Alle Rechte vorbehalten.</p>
+      <div className="md:hidden mt-8 text-center space-y-1">
+        <p className="text-foreground text-sm font-medium">CleanVis · Devis Lucaci</p>
+        <p className="text-muted-foreground text-sm">Sarasatestraße 26, 81247 München</p>
+        <p className="text-muted-foreground text-sm">Tel: 0172 6316205 · info@cleanvis.de</p>
+        <p className="text-muted-foreground text-sm pt-2">© {new Date().getFullYear()} CleanVis. Alle Rechte vorbehalten.</p>
       </div>
     </footer>
   )

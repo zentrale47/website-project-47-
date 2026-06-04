@@ -7,26 +7,22 @@ import { Textarea } from "@/components/ui/textarea"
 
 export default function AngebotPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <GlassmorphismNav />
 
       <main className="pt-32 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200 mb-6">
-              <FileText className="w-4 h-4 text-green-600" />
-              <span className="text-sm font-medium text-green-700">Angebot</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
+              <FileText className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Angebot</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Kostenloses{" "}
-              <span className="bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-                Angebot
-              </span>{" "}
-              anfordern
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
+              Kostenloses <span className="text-primary">Angebot</span> anfordern
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
               Erhalten Sie ein unverbindliches und transparentes Angebot für Ihre Reinigungsdienstleistung
             </p>
           </div>
@@ -34,56 +30,60 @@ export default function AngebotPage() {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Ihre Anfrage</h2>
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
+                <h2 className="text-2xl font-bold text-foreground mb-6">Ihre Anfrage</h2>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Vorname</label>
+                      <label className="block text-sm font-medium text-foreground mb-2">Vorname</label>
                       <Input placeholder="Max" className="w-full" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Nachname</label>
+                      <label className="block text-sm font-medium text-foreground mb-2">Nachname</label>
                       <Input placeholder="Mustermann" className="w-full" />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">E-Mail</label>
+                    <label className="block text-sm font-medium text-foreground mb-2">E-Mail</label>
                     <Input type="email" placeholder="max@beispiel.de" className="w-full" />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Telefon</label>
-                    <Input type="tel" placeholder="+49 123 456789" className="w-full" />
+                    <label className="block text-sm font-medium text-foreground mb-2">Telefon</label>
+                    <Input type="tel" placeholder="0172 1234567" className="w-full" />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Art der Reinigung</label>
-                    <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                      <option>Gartenpflege</option>
-                      <option>Hausreinigung</option>
-                      <option>Büroreinigung</option>
+                    <label className="block text-sm font-medium text-foreground mb-2">Art der Reinigung</label>
+                    <select className="w-full px-4 py-2 bg-input border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent">
+                      <option>Gebäudereinigung</option>
                       <option>Fensterreinigung</option>
-                      <option>Enterprise</option>
+                      <option>Büroreinigung</option>
+                      <option>Grundreinigung</option>
+                      <option>Privat Haushalt</option>
+                      <option>Gastronomie</option>
+                      <option>Schulen & Bildung</option>
+                      <option>Fitnessstudios</option>
+                      <option>Praxen & Medizin</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Fläche (m²)</label>
+                    <label className="block text-sm font-medium text-foreground mb-2">Fläche (m²)</label>
                     <Input type="number" placeholder="100" className="w-full" />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Zusätzliche Informationen</label>
+                    <label className="block text-sm font-medium text-foreground mb-2">Zusätzliche Informationen</label>
                     <Textarea placeholder="Beschreiben Sie Ihre Anforderungen..." className="w-full min-h-32" />
                   </div>
 
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-6 text-lg">
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg">
                     Angebot anfordern
                   </Button>
 
-                  <p className="text-xs text-gray-500 text-center">
+                  <p className="text-xs text-muted-foreground text-center">
                     Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu
                   </p>
                 </form>
@@ -92,44 +92,44 @@ export default function AngebotPage() {
 
             {/* Benefits */}
             <div className="space-y-6">
-              <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Ihre Vorteile</h3>
+              <div className="bg-card border border-border rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-foreground mb-4">Ihre Vorteile</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-600">Kostenlos & unverbindlich</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground">Kostenlos & unverbindlich</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-600">Antwort innerhalb von 24 Stunden</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground">Antwort innerhalb von 24 Stunden</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-600">Transparente Preisgestaltung</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground">Transparente Konditionen</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-600">Individuelle Beratung</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground">Individuelle Beratung</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-600">Flexible Terminvereinbarung</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground">Flexible Terminvereinbarung</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-6 text-white">
+              <div className="bg-primary rounded-2xl p-6 text-primary-foreground">
                 <h3 className="text-lg font-bold mb-2">Schnelle Antwort garantiert</h3>
-                <p className="text-sm text-white/90">
+                <p className="text-sm text-primary-foreground/90">
                   Wir melden uns innerhalb von 24 Stunden mit einem detaillierten Angebot bei Ihnen.
                 </p>
               </div>
 
-              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Fragen?</h3>
-                <p className="text-sm text-gray-600 mb-4">Rufen Sie uns direkt an:</p>
-                <a href="tel:+4989123456789" className="text-xl font-bold text-green-600 hover:text-green-700 block">
-                  +49 89 123 456 789
+              <div className="bg-card border border-border rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-foreground mb-2">Fragen?</h3>
+                <p className="text-sm text-muted-foreground mb-4">Rufen Sie uns direkt an:</p>
+                <a href="tel:+491726316205" className="text-xl font-bold text-primary hover:text-primary/80 block">
+                  0172 6316205
                 </a>
               </div>
             </div>

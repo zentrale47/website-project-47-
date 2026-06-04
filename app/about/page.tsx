@@ -7,20 +7,17 @@ import Image from "next/image"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <GlassmorphismNav />
 
       <main className="pt-32 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Über{" "}
-              <span className="bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-                CleanVis
-              </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              Über <span className="text-primary">CleanVis</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Ihr vertrauensvoller Partner für professionelle Reinigungsdienstleistungen in München
             </p>
           </div>
@@ -37,12 +34,12 @@ export default function AboutPage() {
 
           {/* Story */}
           <div className="prose prose-lg max-w-none mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Unsere Geschichte</h2>
-            <p className="text-gray-600 mb-4">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Unsere Geschichte</h2>
+            <p className="text-muted-foreground mb-4">
               CleanVis wurde mit der Vision gegründet, München sauberer und grüner zu machen. Wir sind ein
               familiengeführtes Unternehmen, das sich auf umweltfreundliche Reinigungslösungen spezialisiert hat.
             </p>
-            <p className="text-gray-600 mb-4">
+            <p className="text-muted-foreground mb-4">
               Mit über 5 Jahren Erfahrung in der Branche haben wir uns einen Namen für Qualität, Zuverlässigkeit und
               Kundenzufriedenheit gemacht. Unser Team besteht aus geschulten Fachkräften, die mit Leidenschaft und
               Sorgfalt arbeiten.
@@ -51,34 +48,34 @@ export default function AboutPage() {
 
           {/* Values */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-green-50 border border-green-200 rounded-2xl p-8">
-              <CheckCircle2 className="w-12 h-12 text-green-600 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Qualität</h3>
-              <p className="text-gray-600">
+            <div className="bg-card border border-border rounded-2xl p-8">
+              <CheckCircle2 className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-2xl font-bold text-foreground mb-3">Qualität</h3>
+              <p className="text-muted-foreground">
                 Wir setzen auf höchste Qualitätsstandards und verwenden nur umweltfreundliche Reinigungsmittel.
               </p>
             </div>
 
-            <div className="bg-green-50 border border-green-200 rounded-2xl p-8">
-              <Users className="w-12 h-12 text-green-600 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Team</h3>
-              <p className="text-gray-600">
+            <div className="bg-card border border-border rounded-2xl p-8">
+              <Users className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-2xl font-bold text-foreground mb-3">Team</h3>
+              <p className="text-muted-foreground">
                 Unser erfahrenes Team ist geschult, versichert und arbeitet mit größter Sorgfalt.
               </p>
             </div>
 
-            <div className="bg-green-50 border border-green-200 rounded-2xl p-8">
-              <Award className="w-12 h-12 text-green-600 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Erfahrung</h3>
-              <p className="text-gray-600">
+            <div className="bg-card border border-border rounded-2xl p-8">
+              <Award className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-2xl font-bold text-foreground mb-3">Erfahrung</h3>
+              <p className="text-muted-foreground">
                 Über 5 Jahre Erfahrung und hunderte zufriedene Kunden in München und Umgebung.
               </p>
             </div>
 
-            <div className="bg-green-50 border border-green-200 rounded-2xl p-8">
-              <Heart className="w-12 h-12 text-green-600 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Leidenschaft</h3>
-              <p className="text-gray-600">
+            <div className="bg-card border border-border rounded-2xl p-8">
+              <Heart className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-2xl font-bold text-foreground mb-3">Leidenschaft</h3>
+              <p className="text-muted-foreground">
                 Wir lieben was wir tun und setzen uns mit Herzblut für saubere Räume und Gärten ein.
               </p>
             </div>

@@ -126,19 +126,19 @@ export function TrustSection() {
           </div>
 
           {/* Active Step Content */}
-          <div className={`bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200 max-w-4xl mx-auto transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <div className={`bg-card rounded-3xl p-8 md:p-12 shadow-lg border border-border max-w-4xl mx-auto transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <div className="flex items-start gap-6">
-              <div className="hidden md:flex w-20 h-20 bg-green-600 rounded-2xl items-center justify-center flex-shrink-0">
-                <span className="text-3xl font-bold text-white">{processSteps[activeStep].step}</span>
+              <div className="hidden md:flex w-20 h-20 bg-primary rounded-2xl items-center justify-center flex-shrink-0">
+                <span className="text-3xl font-bold text-primary-foreground">{processSteps[activeStep].step}</span>
               </div>
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                   {processSteps[activeStep].title}
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   {processSteps[activeStep].description}
                 </p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 rounded-full text-green-700 font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/15 rounded-full text-primary font-medium">
                   <CheckCircle className="w-4 h-4" />
                   {processSteps[activeStep].highlight}
                 </div>
@@ -152,16 +152,16 @@ export function TrustSection() {
           {trustFeatures.map((feature, index) => (
             <div
               key={index}
-              className={`bg-white rounded-2xl p-6 border border-gray-200 hover:border-green-300 hover:shadow-lg transition-all duration-500 ${
+              className={`bg-card rounded-2xl p-6 border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-500 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
             >
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-primary/15 rounded-xl flex items-center justify-center mb-4">
+                <feature.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+              <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

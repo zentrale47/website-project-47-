@@ -29,7 +29,7 @@ const services = [
       "Regelmäßige Unterhaltsreinigung",
       "Sonderreinigungen auf Anfrage",
     ],
-    color: "bg-green-600",
+    color: "bg-primary",
   },
   {
     id: "fensterreinigung",
@@ -44,7 +44,7 @@ const services = [
       "Regelmäßige Wartungsverträge",
       "Umweltfreundliche Reinigungsmittel",
     ],
-    color: "bg-blue-600",
+    color: "bg-primary",
   },
   {
     id: "bueroreinigung",
@@ -59,7 +59,7 @@ const services = [
       "Desinfektion von Kontaktflächen",
       "Flexible Reinigungszeiten",
     ],
-    color: "bg-indigo-600",
+    color: "bg-primary",
   },
   {
     id: "grundreinigung",
@@ -74,7 +74,7 @@ const services = [
       "Bad und Sanitäranlagen",
       "Desinfektion aller Bereiche",
     ],
-    color: "bg-emerald-600",
+    color: "bg-primary",
   },
   {
     id: "privathaushalt",
@@ -89,7 +89,7 @@ const services = [
       "Fensterreinigung",
       "Individuelle Wünsche",
     ],
-    color: "bg-amber-600",
+    color: "bg-primary",
   },
   {
     id: "gastronomie",
@@ -104,7 +104,7 @@ const services = [
       "Fettabscheider-Reinigung",
       "Notfall-Service verfügbar",
     ],
-    color: "bg-orange-600",
+    color: "bg-primary",
   },
   {
     id: "schulen",
@@ -119,7 +119,7 @@ const services = [
       "Außenbereiche",
       "Ferienreinigung",
     ],
-    color: "bg-purple-600",
+    color: "bg-primary",
   },
   {
     id: "fitnessstudios",
@@ -134,7 +134,7 @@ const services = [
       "Empfangs- und Wartebereiche",
       "Tägliche Hygiene-Checks",
     ],
-    color: "bg-red-600",
+    color: "bg-primary",
   },
   {
     id: "praxen",
@@ -149,26 +149,26 @@ const services = [
       "Desinfektion nach Vorschrift",
       "Flexible Reinigungszeiten",
     ],
-    color: "bg-teal-600",
+    color: "bg-primary",
   },
 ]
 
 export default function LeistungenPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <GlassmorphismNav />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-white to-gray-50">
+      <section className="pt-32 pb-16 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200 mb-6">
-            <Sparkles className="w-4 h-4 text-green-600" />
-            <span className="text-sm font-medium text-green-700">Unsere Leistungen</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-6">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Unsere Leistungen</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            9 Bereiche. <span className="text-green-600">Eine Qualität.</span>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
+            9 Bereiche. <span className="text-primary">Eine Qualität.</span>
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-pretty">
             Von der Gebäudereinigung bis zur medizinischen Praxis - CleanVis bietet maßgeschneiderte 
             Reinigungslösungen für jeden Bedarf in München und Umgebung.
           </p>
@@ -180,37 +180,37 @@ export default function LeistungenPage() {
         <section 
           key={service.id} 
           id={service.id} 
-          className={`py-20 px-4 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+          className={`py-20 px-4 ${index % 2 === 0 ? "bg-background" : "bg-card/40"}`}
         >
           <div className="max-w-6xl mx-auto">
             <div className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
               <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200 mb-4`}>
-                  <service.icon className="w-5 h-5 text-green-600" />
-                  <span className="text-sm font-semibold text-green-700">{service.title}</span>
+                <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 mb-4`}>
+                  <service.icon className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-semibold text-primary">{service.title}</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{service.title}</h2>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{service.title}</h2>
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   {service.description}
                 </p>
                 <ul className="space-y-3 mb-8">
                   {service.features.slice(0, 4).map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
+                      <div className="w-6 h-6 rounded-full bg-primary/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="w-4 h-4 text-primary" />
                       </div>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-foreground/90">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link href="/angebot">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6 py-3">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-3">
                     Angebot anfragen
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               </div>
-              <div className={`${service.color} rounded-3xl p-8 text-white ${index % 2 === 1 ? "md:order-1" : ""}`}>
+              <div className={`${service.color} rounded-3xl p-8 text-primary-foreground ${index % 2 === 1 ? "md:order-1" : ""}`}>
                 <div className="flex items-center gap-3 mb-6">
                   <service.icon className="w-10 h-10" />
                   <h3 className="text-2xl font-bold">Leistungsumfang</h3>
