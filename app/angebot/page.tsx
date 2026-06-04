@@ -1,9 +1,7 @@
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { Footer } from "@/components/footer"
 import { FileText, CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { AngebotForm } from "@/components/angebot-form"
 
 export default function AngebotPage() {
   return (
@@ -32,61 +30,7 @@ export default function AngebotPage() {
             <div className="lg:col-span-2">
               <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
                 <h2 className="text-2xl font-bold text-foreground mb-6">Ihre Anfrage</h2>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Vorname</label>
-                      <Input placeholder="Max" className="w-full bg-background border-border focus-visible:bg-background" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Nachname</label>
-                      <Input placeholder="Mustermann" className="w-full bg-background border-border focus-visible:bg-background" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">E-Mail</label>
-                    <Input type="email" placeholder="max@beispiel.de" className="w-full bg-background border-border focus-visible:bg-background" />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Telefon</label>
-                    <Input type="tel" placeholder="0172 1234567" className="w-full bg-background border-border focus-visible:bg-background" />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Art der Reinigung</label>
-                    <select className="w-full px-4 py-2 bg-background border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent">
-                      <option>Gebäudereinigung</option>
-                      <option>Fensterreinigung</option>
-                      <option>Büroreinigung</option>
-                      <option>Grundreinigung</option>
-                      <option>Privat Haushalt</option>
-                      <option>Gastronomie</option>
-                      <option>Schulen & Bildung</option>
-                      <option>Fitnessstudios</option>
-                      <option>Praxen & Medizin</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Fläche (m²)</label>
-                    <Input type="number" placeholder="100" className="w-full bg-background border-border focus-visible:bg-background" />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Zusätzliche Informationen</label>
-                    <Textarea placeholder="Beschreiben Sie Ihre Anforderungen..." className="w-full min-h-32 bg-background border-border focus-visible:bg-background" />
-                  </div>
-
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg">
-                    Angebot anfordern
-                  </Button>
-
-                  <p className="text-xs text-muted-foreground text-center">
-                    Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu
-                  </p>
-                </form>
+                <AngebotForm />
               </div>
             </div>
 

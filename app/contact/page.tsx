@@ -1,9 +1,7 @@
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { Footer } from "@/components/footer"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { ContactForm } from "@/components/contact-form"
 
 export default function ContactPage() {
   return (
@@ -26,31 +24,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
               <h2 className="text-2xl font-bold text-foreground mb-6">Nachricht senden</h2>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Name</label>
-                  <Input placeholder="Ihr Name" className="w-full bg-background border-border focus-visible:bg-background" />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">E-Mail</label>
-                  <Input type="email" placeholder="ihre@email.de" className="w-full bg-background border-border focus-visible:bg-background" />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Telefon</label>
-                  <Input type="tel" placeholder="0172 1234567" className="w-full bg-background border-border focus-visible:bg-background" />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Nachricht</label>
-                  <Textarea placeholder="Ihre Nachricht..." className="w-full min-h-32 bg-background border-border focus-visible:bg-background" />
-                </div>
-
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg">
-                  Nachricht senden
-                </Button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Contact Info */}
