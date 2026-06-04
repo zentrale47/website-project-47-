@@ -12,16 +12,16 @@ const navigation = [
     name: "Leistungen",
     href: "/leistungen",
     dropdown: [
-      { name: "Enterprise Lösungen", href: "/enterprise" },
-      { name: "Büroreinigung", href: "/leistungen#buero" },
-      { name: "Hausreinigung", href: "/leistungen#haus" },
-      { name: "Gartenpflege", href: "/leistungen#garten" },
-      { name: "Fensterreinigung", href: "/leistungen#fenster" },
+      { name: "Gebäudereinigung", href: "/leistungen#gebaeudereinigung" },
+      { name: "Fensterreinigung", href: "/leistungen#fensterreinigung" },
+      { name: "Büroreinigung", href: "/leistungen#bueroreinigung" },
+      { name: "Grundreinigung", href: "/leistungen#grundreinigung" },
+      { name: "Privat Haushalt", href: "/leistungen#privathaushalt" },
+      { name: "Gastronomie", href: "/leistungen#gastronomie" },
     ],
   },
-  { name: "Enterprise", href: "/enterprise" },
   { name: "Notfall-Service", href: "/notfall-service" },
-  { name: "Angebot Anfordern", href: "/angebot" },
+  { name: "Angebot", href: "/angebot" },
   { name: "Über uns", href: "/about" },
 ]
 

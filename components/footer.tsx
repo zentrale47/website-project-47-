@@ -2,7 +2,6 @@
 import type React from "react"
 import type { ComponentProps, ReactNode } from "react"
 import { motion, useReducedMotion } from "framer-motion"
-import { FacebookIcon, InstagramIcon, LinkedinIcon } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -21,12 +20,21 @@ const footerLinks: FooterSection[] = [
   {
     label: "Leistungen",
     links: [
-      { title: "Unsere Leistungen", href: "/leistungen" },
-      { title: "Büroreinigung", href: "/leistungen#buero" },
-      { title: "Hausreinigung", href: "/leistungen#haus" },
-      { title: "Gartenpflege", href: "/leistungen#garten" },
-      { title: "Fensterreinigung", href: "/leistungen#fenster" },
-      { title: "Enterprise", href: "/enterprise" },
+      { title: "Alle Leistungen", href: "/leistungen" },
+      { title: "Gebäudereinigung", href: "/leistungen#gebaeudereinigung" },
+      { title: "Fensterreinigung", href: "/leistungen#fensterreinigung" },
+      { title: "Büroreinigung", href: "/leistungen#bueroreinigung" },
+      { title: "Grundreinigung", href: "/leistungen#grundreinigung" },
+      { title: "Privat Haushalt", href: "/leistungen#privathaushalt" },
+    ],
+  },
+  {
+    label: "Branchen",
+    links: [
+      { title: "Gastronomie", href: "/leistungen#gastronomie" },
+      { title: "Schulen & Bildung", href: "/leistungen#schulen" },
+      { title: "Fitnessstudios", href: "/leistungen#fitnessstudios" },
+      { title: "Praxen & Medizin", href: "/leistungen#praxen" },
     ],
   },
   {
@@ -35,15 +43,7 @@ const footerLinks: FooterSection[] = [
       { title: "Über uns", href: "/about" },
       { title: "Kontakt", href: "/contact" },
       { title: "Notfall-Service", href: "/notfall-service" },
-      { title: "Angebot Anfordern", href: "/angebot" },
-    ],
-  },
-  {
-    label: "Social Media",
-    links: [
-      { title: "Facebook", href: "#", icon: FacebookIcon },
-      { title: "Instagram", href: "#", icon: InstagramIcon },
-      { title: "LinkedIn", href: "#", icon: LinkedinIcon },
+      { title: "Angebot anfragen", href: "/angebot" },
     ],
   },
 ]

@@ -1,148 +1,162 @@
 import { Button } from "@/components/ui/button"
-import RotatingText from "./RotatingText"
 import Link from "next/link"
-
-const ArrowRight = () => (
-  <svg
-    className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-  </svg>
-)
-
-const Play = () => (
-  <svg
-    className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1m-6-8h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z"
-    />
-  </svg>
-)
+import { Phone, MessageCircle, Shield, Clock, CheckCircle, Sparkles } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
-      <div className="max-w-4xl mx-auto text-center relative z-10 animate-fade-in-hero">
-        {/* Badge */}
-        <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 backdrop-blur-md border border-green-200 text-green-800 text-sm font-medium mb-8 mt-12 animate-fade-in-badge">
-          <span className="w-2 h-2 bg-green-600 rounded-full mr-2 animate-pulse"></span>
-          Professionelle Reinigung in München
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-6xl mx-auto relative z-10 pt-16">
+        {/* Top Badge Row */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-8 animate-fade-in-badge">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 border border-green-200 text-green-700 text-sm font-medium">
+            <Shield className="w-4 h-4 mr-2" />
+            Haftpflichtversichert
+          </div>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 border border-green-200 text-green-700 text-sm font-medium">
+            <Clock className="w-4 h-4 mr-2" />
+            Flexible Termine
+          </div>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 border border-green-200 text-green-700 text-sm font-medium">
+            <CheckCircle className="w-4 h-4 mr-2" />
+            Kostenlose Beratung
+          </div>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-balance mb-6 animate-fade-in-heading">
-          <span className="text-gray-900">Ihr Partner für</span>
-          <br />
-          <span className="inline-flex items-center justify-center flex-wrap gap-2 mt-4 sm:mt-6 md:mt-8">
-            <span className="text-gray-900">saubere</span>
-            <RotatingText
-              texts={["Gärten", "Häuser", "Büros", "Räume", "Flächen"]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-green-600 text-white overflow-hidden py-1 sm:py-1 md:py-2 justify-center rounded-lg shadow-lg"
-              staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-1 sm:pb-1 md:pb-1"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={2000}
-            />
-          </span>
-        </h1>
-
-        {/* Subheading */}
-        <p className="text-base sm:text-xl md:text-2xl text-gray-700 text-balance max-w-sm sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-light">
-          CleanVis bietet professionelle Reinigungsdienstleistungen für Gärten, Häuser und Büros in München.
-          Zuverlässig, gründlich und umweltfreundlich.
-        </p>
+        <div className="text-center mb-12 animate-fade-in-heading">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 text-balance">
+            Professionelle{" "}
+            <span className="text-green-600">Gebäudereinigung</span>
+            <br />
+            in München
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+            Zuverlässige Reinigung für Büros, Privathaushalte, Gastronomie, Schulen, Fitnessstudios und Praxen. 
+            Online anfragen und Termine sauber planen.
+          </p>
+        </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-16 animate-fade-in-buttons">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-buttons">
           <Link href="/angebot">
             <Button
               size="lg"
-              className="bg-green-600 text-white rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-green-700 hover:scale-105 hover:shadow-lg group cursor-pointer relative overflow-hidden"
+              className="bg-green-600 text-white rounded-full px-8 py-6 text-lg font-medium transition-all duration-300 hover:bg-green-700 hover:scale-105 hover:shadow-xl group cursor-pointer"
             >
-              Jetzt Angebot erhalten
-              <ArrowRight />
+              Kostenloses Angebot anfragen
+              <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Button>
           </Link>
-
           <Link href="/leistungen">
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full px-8 py-4 text-lg font-medium border-green-600 text-green-700 hover:bg-green-50 transition-all duration-200 hover:scale-105 group bg-transparent cursor-pointer"
+              className="rounded-full px-8 py-6 text-lg font-medium border-2 border-gray-300 text-gray-700 hover:bg-gray-100 transition-all duration-200 hover:scale-105 bg-white cursor-pointer"
             >
-              <Play />
-              Unsere Leistungen
+              Leistungen ansehen
             </Button>
           </Link>
+          <a href="https://wa.me/4917631285390" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              size="lg"
+              className="rounded-full px-6 py-6 text-lg font-medium border-2 border-green-500 text-green-600 hover:bg-green-50 transition-all duration-200 hover:scale-105 bg-white cursor-pointer"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp
+            </Button>
+          </a>
         </div>
 
-        {/* Trust Indicators */}
-        <div className="text-center px-4 hidden sm:block overflow-hidden animate-fade-in-trust">
-          <p className="text-sm text-gray-600 mb-6">Vertraut von Kunden in ganz München</p>
-          <div className="relative overflow-hidden w-full max-w-4xl mx-auto">
-            <div className="flex items-center gap-8 opacity-60 hover:opacity-80 transition-all duration-500 animate-slide-left">
-              <div className="flex items-center gap-8 whitespace-nowrap">
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Privathaushalte</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Bürokomplexe</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Gartenpflege</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Gebäudereinigung</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Fensterreinigung</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Grundreinigung</div>
-              </div>
-              {/* Duplicate for seamless loop */}
-              <div className="flex items-center gap-8 whitespace-nowrap">
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Privathaushalte</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Bürokomplexe</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Gartenpflege</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Gebäudereinigung</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Fensterreinigung</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-700">Grundreinigung</div>
-              </div>
+        {/* Service Cockpit Dashboard */}
+        <div className="bg-white rounded-3xl shadow-2xl border border-gray-200 p-6 md:p-8 max-w-5xl mx-auto animate-fade-in-trust">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-3">
+              <Sparkles className="w-5 h-5 text-green-600" />
+              <span className="text-sm font-medium text-gray-500">Service Cockpit</span>
             </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-xs text-gray-500">live</span>
+            </div>
+          </div>
+
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+            Sauberkeit wird planbar
+          </h2>
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
+            <div className="bg-gray-50 rounded-2xl p-4 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">60</div>
+              <div className="text-xs text-gray-500">Sek. Online-Anfrage</div>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-4 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">9</div>
+              <div className="text-xs text-gray-500">Leistungsbereiche</div>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-4 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">24h</div>
+              <div className="text-xs text-gray-500">Rückmeldefokus</div>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-4 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">100%</div>
+              <div className="text-xs text-gray-500">Zufriedenheit</div>
+            </div>
+          </div>
+
+          {/* Process Steps */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+            <div className="flex items-center gap-3 bg-green-50 rounded-xl p-3 border border-green-200">
+              <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+              <span className="text-sm font-medium text-gray-700">Anfrage</span>
+            </div>
+            <div className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 border border-gray-200">
+              <div className="w-8 h-8 bg-gray-400 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+              <span className="text-sm font-medium text-gray-600">Planung</span>
+            </div>
+            <div className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 border border-gray-200">
+              <div className="w-8 h-8 bg-gray-400 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+              <span className="text-sm font-medium text-gray-600">Team</span>
+            </div>
+            <div className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 border border-gray-200">
+              <div className="w-8 h-8 bg-gray-400 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+              <span className="text-sm font-medium text-gray-600">Kontrolle</span>
+            </div>
+          </div>
+
+          {/* Bottom Info */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-gray-200">
+            <div className="text-center md:text-left">
+              <p className="text-sm text-gray-500">Nächster Schritt</p>
+              <p className="font-medium text-gray-900">Anfrage in 60 Sekunden starten</p>
+            </div>
+            <Link href="/angebot">
+              <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6 py-3 font-medium">
+                Starten
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Button>
+            </Link>
           </div>
         </div>
 
-        {/* Mobile Trust Indicators */}
-        <div className="text-center px-4 mb-8 sm:hidden overflow-hidden animate-fade-in-trust">
-          <p className="text-sm text-gray-600 mb-6">Vertraut von Kunden in ganz München</p>
-          <div className="relative overflow-hidden w-full max-w-sm mx-auto">
-            {/* Left blur fade */}
-            <div className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            {/* Right blur fade */}
-            <div className="absolute right-0 top-0 w-8 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-            <div className="flex items-center gap-6 opacity-60 animate-slide-left-mobile">
-              <div className="flex items-center gap-6 whitespace-nowrap">
-                <div className="text-sm font-semibold text-gray-700">Privathaushalte</div>
-                <div className="text-sm font-semibold text-gray-700">Bürokomplexe</div>
-                <div className="text-sm font-semibold text-gray-700">Gartenpflege</div>
-                <div className="text-sm font-semibold text-gray-700">Gebäudereinigung</div>
-                <div className="text-sm font-semibold text-gray-700">Fensterreinigung</div>
-                <div className="text-sm font-semibold text-gray-700">Grundreinigung</div>
-              </div>
-              {/* Duplicate for seamless loop */}
-              <div className="flex items-center gap-6 whitespace-nowrap">
-                <div className="text-sm font-semibold text-gray-700">Privathaushalte</div>
-                <div className="text-sm font-semibold text-gray-700">Bürokomplexe</div>
-                <div className="text-sm font-semibold text-gray-700">Gartenpflege</div>
-                <div className="text-sm font-semibold text-gray-700">Gebäudereinigung</div>
-                <div className="text-sm font-semibold text-gray-700">Fensterreinigung</div>
-                <div className="text-sm font-semibold text-gray-700">Grundreinigung</div>
-              </div>
-            </div>
+        {/* Trust Badges Bottom */}
+        <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-gray-500 animate-fade-in-trust">
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-600" />
+            <span>Feste Ansprechpartner</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-600" />
+            <span>Flexible Zeiten</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-600" />
+            <span>München & Umgebung</span>
           </div>
         </div>
       </div>
