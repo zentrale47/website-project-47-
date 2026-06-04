@@ -36,27 +36,27 @@ export default function AngebotPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">Vorname</label>
-                      <Input placeholder="Max" className="w-full" />
+                      <Input placeholder="Max" className="w-full bg-background border-border focus-visible:bg-background" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">Nachname</label>
-                      <Input placeholder="Mustermann" className="w-full" />
+                      <Input placeholder="Mustermann" className="w-full bg-background border-border focus-visible:bg-background" />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">E-Mail</label>
-                    <Input type="email" placeholder="max@beispiel.de" className="w-full" />
+                    <Input type="email" placeholder="max@beispiel.de" className="w-full bg-background border-border focus-visible:bg-background" />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Telefon</label>
-                    <Input type="tel" placeholder="0172 1234567" className="w-full" />
+                    <Input type="tel" placeholder="0172 1234567" className="w-full bg-background border-border focus-visible:bg-background" />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Art der Reinigung</label>
-                    <select className="w-full px-4 py-2 bg-input border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent">
+                    <select className="w-full px-4 py-2 bg-background border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent">
                       <option>Gebäudereinigung</option>
                       <option>Fensterreinigung</option>
                       <option>Büroreinigung</option>
@@ -71,12 +71,12 @@ export default function AngebotPage() {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Fläche (m²)</label>
-                    <Input type="number" placeholder="100" className="w-full" />
+                    <Input type="number" placeholder="100" className="w-full bg-background border-border focus-visible:bg-background" />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Zusätzliche Informationen</label>
-                    <Textarea placeholder="Beschreiben Sie Ihre Anforderungen..." className="w-full min-h-32" />
+                    <Textarea placeholder="Beschreiben Sie Ihre Anforderungen..." className="w-full min-h-32 bg-background border-border focus-visible:bg-background" />
                   </div>
 
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg">

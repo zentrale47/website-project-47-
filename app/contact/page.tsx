@@ -29,22 +29,22 @@ export default function ContactPage() {
               <form className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Name</label>
-                  <Input placeholder="Ihr Name" className="w-full" />
+                  <Input placeholder="Ihr Name" className="w-full bg-background border-border focus-visible:bg-background" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">E-Mail</label>
-                  <Input type="email" placeholder="ihre@email.de" className="w-full" />
+                  <Input type="email" placeholder="ihre@email.de" className="w-full bg-background border-border focus-visible:bg-background" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Telefon</label>
-                  <Input type="tel" placeholder="0172 1234567" className="w-full" />
+                  <Input type="tel" placeholder="0172 1234567" className="w-full bg-background border-border focus-visible:bg-background" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Nachricht</label>
-                  <Textarea placeholder="Ihre Nachricht..." className="w-full min-h-32" />
+                  <Textarea placeholder="Ihre Nachricht..." className="w-full min-h-32 bg-background border-border focus-visible:bg-background" />
                 </div>
 
                 <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg">
