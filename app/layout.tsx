@@ -20,9 +20,9 @@ const caveat = Caveat({
 })
 
 export const metadata: Metadata = {
-  title: "Cliste - AI Automation for Enterprise",
+  title: "CleanVis - Professionelle Gebäudereinigung",
   description:
-    "Transform your business with intelligent AI automation solutions. Empower your organization to operate at the speed of thought.",
+    "CleanVis - Ihr zuverlässiger Partner für Gebäudereinigung, Fensterreinigung, Büroreinigung, Grundreinigung und mehr. Haftpflichtversichert, flexibel und gründlich.",
   generator: "v0.app",
 }
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="de" className="dark bg-background">
       <body className={`font-sans antialiased ${dancingScript.variable} ${caveat.variable}`}>
         <Suspense fallback={null}>
           <NavigationTransition />

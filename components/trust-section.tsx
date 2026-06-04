@@ -90,20 +90,19 @@ export function TrustSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-gray-50">
+    <section ref={sectionRef} className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 border border-green-200 text-green-700 text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/15 border border-primary/30 text-primary text-sm font-medium mb-6">
             Die CleanVis Story
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Aus Reinigung wird ein{" "}
-            <span className="text-green-600">verlässlicher Eindruck.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+            Aus Reinigung wird ein <span className="text-primary">verlässlicher Eindruck.</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Menschen entscheiden in Sekunden, ob ein Raum gepflegt, professionell und vertrauenswürdig wirkt. 
-            Wir sorgen dafür, dass Ihr Objekt jeden Tag bereit ist.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
+            Menschen entscheiden in Sekunden, ob ein Raum gepflegt, professionell und vertrauenswürdig wirkt. Wir sorgen
+            dafür, dass Ihr Objekt jeden Tag bereit ist.
           </p>
         </div>
 
@@ -117,8 +116,8 @@ export function TrustSection() {
                 onClick={() => setActiveStep(index)}
                 className={`px-5 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
                   activeStep === index
-                    ? "bg-green-600 text-white shadow-lg"
-                    : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "bg-card text-muted-foreground hover:bg-card/70 border border-border"
                 }`}
               >
                 {step.step} {step.title}
