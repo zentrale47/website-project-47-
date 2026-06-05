@@ -54,7 +54,7 @@ export function CTASection() {
             </div>
             <h3 className="text-xl font-bold text-primary-foreground mb-2">Anrufen</h3>
             <p className="text-primary-foreground/80 mb-4">Direkt mit uns sprechen</p>
-            <span className="text-primary-foreground font-medium">0172 6316205</span>
+            <span className="text-primary-foreground font-medium">+49 172 6316205</span>
           </a>
 
           {/* WhatsApp */}

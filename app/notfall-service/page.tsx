@@ -34,7 +34,7 @@ export default function NotfallServicePage() {
               href="tel:+491726316205"
               className="inline-block bg-card text-primary font-bold text-3xl md:text-4xl px-8 py-4 rounded-full hover:bg-card/80 transition-all duration-300 hover:scale-105 shadow-lg"
             >
-              0172 6316205
+              +49 172 6316205
             </a>
           </div>
 

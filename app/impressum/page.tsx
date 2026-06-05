@@ -33,7 +33,7 @@ export default function ImpressumPage() {
                 <p>
                   Telefon:{" "}
                   <a href="tel:+491726316205" className="text-primary hover:underline">
-                    0172 6316205
+                    +49 172 6316205
                   </a>
                 </p>
                 <p>

@@ -75,7 +75,7 @@ export function Footer() {
           <div className="text-muted-foreground mt-8 text-sm md:mt-0 md:block hidden space-y-1">
             <p className="font-medium text-foreground"><span className="text-foreground">Clean</span><span className="text-primary">Vis</span> · Devis Lucaci</p>
             <p>Sarasatestraße 26, 81247 München</p>
-            <p>Tel: 0172 6316205</p>
+            <p>Tel: +49 172 6316205</p>
             <p>E-Mail: info@cleanvis.de</p>
             <p className="pt-2">© {new Date().getFullYear()} <span className="text-foreground">Clean</span><span className="text-primary">Vis</span>. Alle Rechte vorbehalten.</p>
           </div>
@@ -124,7 +124,7 @@ export function Footer() {
       <div className="md:hidden mt-8 text-center space-y-1">
         <p className="text-foreground text-sm font-medium"><span className="text-foreground">Clean</span><span className="text-primary">Vis</span> · Devis Lucaci</p>
         <p className="text-muted-foreground text-sm">Sarasatestraße 26, 81247 München</p>
-        <p className="text-muted-foreground text-sm">Tel: 0172 6316205 · info@cleanvis.de</p>
+        <p className="text-muted-foreground text-sm">Tel: +49 172 6316205 · info@cleanvis.de</p>
         <p className="text-muted-foreground text-sm pt-2">© {new Date().getFullYear()} <span className="text-foreground">Clean</span><span className="text-primary">Vis</span>. Alle Rechte vorbehalten.</p>
       </div>
     </footer>

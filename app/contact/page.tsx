@@ -34,7 +34,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold text-foreground mb-2">Telefon</h3>
                 <p className="text-muted-foreground mb-2">Rufen Sie uns an:</p>
                 <a href="tel:+491726316205" className="text-2xl font-bold text-primary hover:text-primary/80">
-                  0172 6316205
+                  +49 172 6316205
                 </a>
               </div>
 

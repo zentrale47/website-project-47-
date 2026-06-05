@@ -251,7 +251,7 @@ export default function EnterprisePage() {
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-full bg-transparent"
               >
-                0172 6316205
+                +49 172 6316205
               </Button>
             </Link>
           </div>

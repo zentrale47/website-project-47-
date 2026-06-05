@@ -73,7 +73,7 @@ export default function AngebotPage() {
                 <h3 className="text-lg font-bold text-foreground mb-2">Fragen?</h3>
                 <p className="text-sm text-muted-foreground mb-4">Rufen Sie uns direkt an:</p>
                 <a href="tel:+491726316205" className="text-xl font-bold text-primary hover:text-primary/80 block">
-                  0172 6316205
+                  +49 172 6316205
                 </a>
               </div>
             </div>

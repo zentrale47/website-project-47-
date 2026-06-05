@@ -78,7 +78,7 @@ export function GlassmorphismNav() {
           <div className="flex items-center gap-6">
             <a href="tel:+491726316205" className="flex items-center gap-1.5 hover:text-primary transition-colors">
               <Phone className="w-3.5 h-3.5 text-primary" />
-              0172 6316205
+              +49 172 6316205
             </a>
             <a href="mailto:info@cleanvis.de" className="flex items-center gap-1.5 hover:text-primary transition-colors">
               <Mail className="w-3.5 h-3.5 text-primary" />

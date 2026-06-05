@@ -55,7 +55,7 @@ export async function sendInquiry(_prevState: InquiryState, formData: FormData):
   if (!process.env.RESEND_API_KEY) {
     return {
       success: false,
-      message: "Der E-Mail-Dienst ist noch nicht konfiguriert. Bitte kontaktieren Sie uns telefonisch unter 0172 6316205.",
+      message: "Der E-Mail-Dienst ist noch nicht konfiguriert. Bitte kontaktieren Sie uns telefonisch unter +49 172 6316205.",
     }
   }
 
