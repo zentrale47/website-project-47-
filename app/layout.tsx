@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Suspense } from "react"
 import "./globals.css"
 import { PageTransition } from "@/components/page-transition"
@@ -18,6 +18,13 @@ const caveat = Caveat({
   variable: "--font-caveat",
   display: "swap",
 })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#495057",
+}
 
 export const metadata: Metadata = {
   title: "CleanVis - Professionelle Gebäudereinigung",
