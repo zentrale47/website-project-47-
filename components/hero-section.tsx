@@ -6,13 +6,13 @@ export function HeroSection() {
   return (
     <section className="flex items-center justify-center px-4 pt-12 pb-20 relative">
       {/* Background Image with Dark Overlay */}
-      <div className="absolute inset-0 z-0 bg-[#1a1a1a]">
+      <div className="absolute inset-0 z-0">
         <img 
           src="/images/hero-background.png" 
           alt="" 
-          className="w-full h-full object-contain opacity-80"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Top Badge Row */}
