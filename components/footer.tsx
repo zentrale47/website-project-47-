@@ -68,7 +68,7 @@ export function Footer() {
               alt="CleanVis Logo"
               width={56}
               height={56}
-              className="object-contain -ml-3 -mr-2"
+              className="object-contain -ml-2 -mr-2"
             />
             <span className="text-2xl font-bold"><span className="text-foreground">Clean</span><span className="text-primary">Vis</span></span>
           </Link>
