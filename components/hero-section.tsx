@@ -71,7 +71,7 @@ export function HeroSection() {
               Leistungen ansehen
             </Button>
           </Link>
-          <a href="https://wa.me/4917631285390" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/491726316205" target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
               size="lg"
