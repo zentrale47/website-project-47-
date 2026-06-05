@@ -7,10 +7,17 @@ export function HeroSection() {
     <section className="flex items-center justify-center px-4 pt-12 pb-20 relative">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Desktop Image */}
         <img 
           src="/images/hero-background.png" 
           alt="" 
-          className="w-full h-full object-cover scale-105"
+          className="hidden md:block w-full h-full object-cover scale-105"
+        />
+        {/* Mobile Image */}
+        <img 
+          src="/images/hero-background-mobile.png" 
+          alt="" 
+          className="md:hidden w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
