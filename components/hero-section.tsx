@@ -10,7 +10,7 @@ export function HeroSection() {
         <img 
           src="/images/hero-background.png" 
           alt="" 
-          className="w-full h-full object-cover scale-105 md:scale-105 md:object-center object-[center_20%] scale-[1.15] md:scale-105"
+          className="w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
