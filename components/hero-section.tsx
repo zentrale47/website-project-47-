@@ -17,7 +17,7 @@ export function HeroSection() {
         <img 
           src="/images/hero-background-mobile.png" 
           alt="" 
-          className="md:hidden w-full h-full object-cover scale-105"
+          className="md:hidden w-full h-full object-cover scale-125"
         />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
