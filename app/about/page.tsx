@@ -26,9 +26,9 @@ export default function AboutPage() {
             <Image
               src="/images/cleanvis-full-logo.png"
               alt="CleanVis Logo"
-              width={800}
-              height={267}
-              className="h-64 md:h-80 w-auto"
+              width={200}
+              height={200}
+              className="w-40 h-40 md:w-52 md:h-52 object-contain"
             />
           </div>
 
@@ -82,9 +82,9 @@ export default function AboutPage() {
           </div>
 
           {/* CTA */}
-          <div className="text-center bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Bereit für ein sauberes Zuhause?</h2>
-            <p className="text-white/90 mb-8 text-lg">
+          <div className="text-center bg-primary rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-primary-foreground mb-4">Bereit für ein sauberes Zuhause?</h2>
+            <p className="text-primary-foreground/90 mb-8 text-lg">
               Kontaktieren Sie uns noch heute für ein unverbindliches Angebot
             </p>
             <a
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 window.location.href = "/contact"
                 setTimeout(() => window.scrollTo(0, 0), 100)
               }}
-              className="inline-block bg-white text-green-600 font-semibold px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+              className="inline-block bg-primary-foreground text-primary font-semibold px-8 py-4 rounded-full hover:bg-primary-foreground/90 transition-all duration-300 hover:scale-105"
             >
               Jetzt Kontakt aufnehmen
             </a>
