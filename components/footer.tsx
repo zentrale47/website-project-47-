@@ -62,13 +62,13 @@ export function Footer() {
 
       <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-1.5">
             <Image
               src="/images/cleanvis-full-logo.png"
               alt="CleanVis Logo"
               width={56}
               height={56}
-              className="object-contain"
+              className="object-contain -mr-1"
             />
             <span className="text-2xl font-bold"><span className="text-foreground">Clean</span><span className="text-primary">Vis</span></span>
           </Link>

@@ -99,8 +99,8 @@ export function GlassmorphismNav() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+            <Link href="/" className="flex items-center gap-1.5 group">
+              <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center -mr-1">
                 <Image
                   src="/images/cleanvis-logo.png"
                   alt="CleanVis Logo"
