@@ -70,14 +70,14 @@ export function Footer() {
               height={56}
               className="object-contain"
             />
-            <span className="text-2xl font-bold text-foreground">CleanVis</span>
+            <span className="text-2xl font-bold"><span className="text-foreground">Clean</span><span className="text-primary">Vis</span></span>
           </Link>
           <div className="text-muted-foreground mt-8 text-sm md:mt-0 md:block hidden space-y-1">
-            <p className="font-medium text-foreground">CleanVis · Devis Lucaci</p>
+            <p className="font-medium text-foreground"><span className="text-foreground">Clean</span><span className="text-primary">Vis</span> · Devis Lucaci</p>
             <p>Sarasatestraße 26, 81247 München</p>
             <p>Tel: 0172 6316205</p>
             <p>E-Mail: info@cleanvis.de</p>
-            <p className="pt-2">© {new Date().getFullYear()} CleanVis. Alle Rechte vorbehalten.</p>
+            <p className="pt-2">© {new Date().getFullYear()} <span className="text-foreground">Clean</span><span className="text-primary">Vis</span>. Alle Rechte vorbehalten.</p>
           </div>
         </AnimatedContainer>
 
@@ -122,10 +122,10 @@ export function Footer() {
       </div>
 
       <div className="md:hidden mt-8 text-center space-y-1">
-        <p className="text-foreground text-sm font-medium">CleanVis · Devis Lucaci</p>
+        <p className="text-foreground text-sm font-medium"><span className="text-foreground">Clean</span><span className="text-primary">Vis</span> · Devis Lucaci</p>
         <p className="text-muted-foreground text-sm">Sarasatestraße 26, 81247 München</p>
         <p className="text-muted-foreground text-sm">Tel: 0172 6316205 · info@cleanvis.de</p>
-        <p className="text-muted-foreground text-sm pt-2">© {new Date().getFullYear()} CleanVis. Alle Rechte vorbehalten.</p>
+        <p className="text-muted-foreground text-sm pt-2">© {new Date().getFullYear()} <span className="text-foreground">Clean</span><span className="text-primary">Vis</span>. Alle Rechte vorbehalten.</p>
       </div>
     </footer>
   )

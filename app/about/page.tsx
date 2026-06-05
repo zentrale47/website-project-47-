@@ -15,7 +15,7 @@ export default function AboutPage() {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Über <span className="text-primary">CleanVis</span>
+              Über <span className="text-foreground">Clean</span><span className="text-primary">Vis</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Ihr vertrauensvoller Partner für professionelle Reinigungsdienstleistungen in München

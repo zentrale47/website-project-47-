@@ -109,7 +109,7 @@ export function GlassmorphismNav() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-lg md:text-xl font-bold text-foreground tracking-tight">CleanVis</span>
+              <span className="text-lg md:text-xl font-bold tracking-tight"><span className="text-foreground">Clean</span><span className="text-primary">Vis</span></span>
             </Link>
 
             {/* Desktop Navigation */}
