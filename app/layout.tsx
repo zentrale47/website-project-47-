@@ -24,6 +24,16 @@ export const metadata: Metadata = {
   description:
     "CleanVis - Ihr zuverlässiger Partner für Gebäudereinigung, Fensterreinigung, Büroreinigung, Grundreinigung und mehr. Haftpflichtversichert, flexibel und gründlich.",
   generator: "v0.app",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
+  openGraph: {
+    title: "CleanVis - Professionelle Gebäudereinigung",
+    description: "Ihr zuverlässiger Partner für Gebäudereinigung in München. Haftpflichtversichert, flexibel und gründlich.",
+    images: ["/images/cleanvis-logo.png"],
+    type: "website",
+  },
 }
 
 export default function RootLayout({

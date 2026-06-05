@@ -6,13 +6,20 @@ export function HeroSection() {
   return (
     <section className="flex items-center justify-center px-4 pt-12 pb-20 relative">
       {/* Background Image with Dark Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Desktop Image */}
         <img 
           src="/images/hero-background.png" 
           alt="" 
-          className="w-full h-full object-cover"
+          className="hidden md:block w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Mobile Image */}
+        <img 
+          src="/images/hero-background-mobile.png" 
+          alt="" 
+          className="md:hidden w-full h-full object-cover scale-125"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Top Badge Row */}
@@ -71,7 +78,7 @@ export function HeroSection() {
               Leistungen ansehen
             </Button>
           </Link>
-          <a href="https://wa.me/4917631285390" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/491726316205" target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
               size="lg"
