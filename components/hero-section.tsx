@@ -4,19 +4,28 @@ import { Phone, MessageCircle, Shield, Clock, CheckCircle, Sparkles } from "luci
 
 export function HeroSection() {
   return (
-    <section className="flex items-center justify-center px-4 pt-12 pb-20 relative bg-background">
+    <section className="flex items-center justify-center px-4 pt-12 pb-20 relative">
+      {/* Background Image with Dark Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/images/hero-background.png" 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Top Badge Row */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-8 animate-fade-in-badge">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/15 border border-primary/30 text-primary text-sm font-medium">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-medium backdrop-blur-sm">
             <Shield className="w-4 h-4 mr-2" />
             Haftpflichtversichert
           </div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/15 border border-primary/30 text-primary text-sm font-medium">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-medium backdrop-blur-sm">
             <Clock className="w-4 h-4 mr-2" />
             Flexible Termine
           </div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/15 border border-primary/30 text-primary text-sm font-medium">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-medium backdrop-blur-sm">
             <CheckCircle className="w-4 h-4 mr-2" />
             Kostenlose Beratung
           </div>
@@ -24,12 +33,12 @@ export function HeroSection() {
 
         {/* Main Heading */}
         <div className="text-center mb-12 animate-fade-in-heading">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance">
             Professionelle <span className="text-primary">Gebäudereinigung</span>
             <br />
             in München
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-light">
             Zuverlässige Reinigung für Büros, Privathaushalte, Gastronomie, Schulen, Fitnessstudios und Praxen. Online
             anfragen und Termine sauber planen.
           </p>
@@ -57,7 +66,7 @@ export function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full px-8 py-6 text-lg font-medium border-2 border-border text-foreground hover:bg-card transition-all duration-200 hover:scale-105 bg-transparent cursor-pointer"
+              className="rounded-full px-8 py-6 text-lg font-medium border-2 border-white/50 text-white hover:bg-white/10 transition-all duration-200 hover:scale-105 bg-transparent backdrop-blur-sm cursor-pointer"
             >
               Leistungen ansehen
             </Button>
@@ -157,7 +166,7 @@ export function HeroSection() {
         </div>
 
         {/* Trust Badges Bottom */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-muted-foreground animate-fade-in-trust">
+        <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-white/80 animate-fade-in-trust">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-primary" />
             <span>Feste Ansprechpartner</span>
