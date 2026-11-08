@@ -8,8 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 // WICHTIG: Solange die Domain cleanvis.de NICHT bei resend.com/domains verifiziert
 // ist, erlaubt Resend nur den Versand an die eigene Konto-Adresse. Setze daher
 // INQUIRY_TO_EMAIL auf die im Resend-Konto registrierte E-Mail (z.B. die Gmail-Adresse).
-// Nach der Domain-Verifizierung kann INQUIRY_TO_EMAIL auf info@cleanvis.de gesetzt werden.
-const TO_EMAIL = process.env.INQUIRY_TO_EMAIL || "devislucaci08@gmail.com"
+const TO_EMAIL = "info@cleanvis.de"
 
 // Absender: Solange cleanvis.de nicht in Resend verifiziert ist, MUSS
 // onboarding@resend.dev verwendet werden. Nach Domain-Verifizierung auf
