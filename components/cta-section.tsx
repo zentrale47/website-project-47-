@@ -31,8 +31,9 @@ export function CTASection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-primary">
-      <div className="max-w-6xl mx-auto">
+    <section ref={sectionRef} className="py-28 px-4 bg-primary relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_38%)]" aria-hidden="true" />
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-6 text-balance">
             Bereit für professionelle Reinigung?
