@@ -7,8 +7,8 @@ import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <main className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen bg-background overflow-hidden selection:bg-primary/30">
+      <main className="min-h-screen relative">
         <div className="relative z-10">
           <GlassmorphismNav />
           <HeroSection />

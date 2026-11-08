@@ -109,15 +109,16 @@ export function ServicesSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-card">
+    <section ref={sectionRef} className="py-28 px-4 bg-card border-y border-border/60">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div
           className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/15 border border-primary/30 text-primary text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4 mr-2" />
+          <div className="flex items-center justify-center gap-3 text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-6">
+            <span className="h-px w-8 bg-primary" />
             Unsere Leistungen
+            <span className="h-px w-8 bg-primary" />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-card-foreground mb-6 text-balance">
             9 Bereiche. <span className="text-primary">Eine Qualität.</span>
@@ -133,7 +134,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`group bg-background rounded-2xl p-6 border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${
+              className={`group bg-background/70 rounded-xl p-7 border border-border/80 hover:border-primary/60 hover:bg-background transition-all duration-300 hover:-translate-y-1 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: isVisible ? `${index * 50}ms` : "0ms" }}

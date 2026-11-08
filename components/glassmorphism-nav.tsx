@@ -62,6 +62,7 @@ export function GlassmorphismNav() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
+      <div className="pointer-events-none absolute inset-x-0 -bottom-8 h-8 bg-gradient-to-b from-background/20 to-transparent" />
       {/* Top utility bar */}
       <div className="hidden md:block bg-[#212529] text-primary-foreground/70">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2 text-xs">
@@ -92,8 +93,8 @@ export function GlassmorphismNav() {
       <nav
         className={`w-full border-b transition-all duration-300 ${
           scrolled
-            ? "bg-card/95 backdrop-blur-md border-border shadow-sm"
-            : "bg-card border-border/60"
+            ? "bg-background/90 backdrop-blur-xl border-border/80 shadow-[0_12px_40px_-24px_rgba(0,0,0,0.8)]"
+            : "bg-background/70 backdrop-blur-md border-border/50"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -162,7 +163,7 @@ export function GlassmorphismNav() {
             <div className="hidden md:block">
               <Link
                 href="/angebot"
-                className="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground text-sm font-semibold px-5 py-2.5 rounded-md transition-colors shadow-sm"
+                className="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground text-sm font-semibold px-5 py-3 rounded-full transition-all shadow-[0_8px_20px_-10px_var(--primary)] hover:-translate-y-0.5"
               >
                 Angebot anfragen
               </Link>
