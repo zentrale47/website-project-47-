@@ -3,6 +3,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  color-scheme: dark;
+}
+
+:root {
   /* CleanVis brand palette - #495057 background variant
      495057 (bg) / 343A40 (cards) / 212529 (deep) / DEE2E6 (light text) / 368A59 (green) */
   --background: oklch(0.435 0.011 247);
