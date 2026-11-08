@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   description:
     "CleanVis - Ihr zuverlässiger Partner für Gebäudereinigung, Fensterreinigung, Büroreinigung, Grundreinigung und mehr. Haftpflichtversichert, flexibel und gründlich.",
   generator: "v0.app",
+  robots: { index: true, follow: true },
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
